@@ -1,0 +1,58 @@
+button, .th-btn {
+    font-family: "Source Sans Pro - SemiBold";
+    padding: 15px 30px;
+    color: #fff;
+    background: $secondary;
+    border: 1px solid $secondary;
+    border-radius: 8px;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: $primary;
+        border-color: $primary;
+        color: #fff;
+    }
+
+    &:visited {
+        color: #fff;
+    }
+
+    .btn-arrow {
+        width: 15px;
+        height: 10px;
+        background-image: url(../../images/arrow-light.svg);
+        background-size: 100%;
+        display: inline-table;
+        margin-left: 5px;
+    }
+
+    &.btn-inverse {
+        color: $secondary;
+        background-color: transparent;
+        .btn-arrow {
+            background-image: url(../../images/arrow-blue.svg);
+        }
+        &:hover {
+            color: #fff;
+            background: $secondary;
+            .btn-arrow {
+                background-image: url(../../images/arrow-light.svg);
+            }
+        }
+    }
+
+    &.arrow-left {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 5px;
+        .btn-arrow {
+            transform: rotate(177deg);
+            margin: 0;
+        }
+    }
+
+    @include respond-to(sm) {
+        padding: 12px 24px;
+    }
+}
